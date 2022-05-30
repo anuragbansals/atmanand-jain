@@ -1,55 +1,54 @@
-import { Box, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import { makeStyles } from "@mui/styles";
+// import { makeStyles } from "@mui/styles";
 // import { createTheme } from "@material-ui/core";
-import { styleObj } from "./style";
+// import { styleObj } from "./style";
 import { useDispatch } from "react-redux";
 import { getPhotos } from "../../redux/actions/photosAction";
 import { getTeacher } from "../../redux/actions/getTeachersAction";
 
 const MiniAbout = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
   const dispatch = useDispatch();
 
   React.useEffect(() => {
     dispatch(getPhotos());
     dispatch(getTeacher());
   }, [dispatch]);
-  const clgStyle = {
-    //   marginTop:4
-  };
-  const detStyle = {
-    marginTop: 2,
-  };
-  const descrStyle = {
-    marginTop: 2,
-  };
-  const moreDetStyle = {
-    marginTop: 2,
-  };
+  // const clgStyle = {
+  //   //   marginTop:4
+  // };
+  // const detStyle = {
+  //   marginTop: 2,
+  // };
+  // const descrStyle = {
+  //   marginTop: 2,
+  // };
+  // const moreDetStyle = {
+  //   marginTop: 2,
+  // };
   return (
     <>
-      <Box className={classes.containerClass}>
-        <Typography
-          sx={{
+      <div className="containerClass">
+        <div
+          style={{
             fontWeight: "bold",
             fontSize: 30,
           }}
         >
           परिचय -
-        </Typography>
-        <Typography sx={clgStyle} className={classes.clgClass}>
+        </div>
+        <div className="clgClass">
           श्री आत्मानंद जैन इंटर कॉलेज, हस्तिनापुर, मेरठ
-        </Typography>
-        <Typography sx={detStyle}>
+        </div>
+        <div className="detStyle">
           इंटरमीडिएट स्कूल द्वारा स्थापित और अनुदानित एक मान्यता प्राप्त संस्थान
           है
-        </Typography>
-        <Typography sx={descrStyle}>
+        </div>
+        <div className="descrStyle">
           स्कूल उत्तर प्रदेश माध्यमिक शिक्षा परिषद, प्रयागराज से संबद्ध है।
-        </Typography>
-        <Typography sx={moreDetStyle}>
+        </div>
+        <div className="moreDetStyle">
           श्री 1008 आचार्य श्री पूर्णानंद सुरिश्वर् जी महाराज के शिष्य रत्न महान
           तपस्वी, अनेक तीर्थधारक्, समाज सुधारक, शिक्षा प्रचारक एवं श्री जैन
           शवेतांबर महासभा उत्तर प्रदेश के संस्थापक परम श्रधेय जैनाचार्य श्री
@@ -59,8 +58,8 @@ const MiniAbout = () => {
           हायर सेकेंडरी स्कूल रखा l महाराज साहब का उद्देश्य ग्रामीण छात्रों को
           उचित शिक्षा, दिलाना था l क्योंकि उस समय विद्यालयों का अभाव था।...{" "}
           <Link to="about">अधिक पढ़ें</Link>
-        </Typography>
-      </Box>
+        </div>
+      </div>
     </>
   );
 };
@@ -68,4 +67,4 @@ const MiniAbout = () => {
 export default MiniAbout;
 
 // const theme = createTheme();
-const useStyles = makeStyles((theme) => styleObj);
+// const useStyles = makeStyles((theme) => styleObj);

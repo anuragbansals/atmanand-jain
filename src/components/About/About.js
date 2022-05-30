@@ -1,45 +1,26 @@
-import { Box, Typography } from "@mui/material";
+// import { div, div } from "@mui/material";
 import React from "react";
-import { makeStyles } from "@mui/styles";
 // import { createTheme } from "@material-ui/core";
-import { styleObj } from "./style";
 import { Footer } from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 
 const About = () => {
-  const classes = useStyles();
-  const clgStyle = {
-    marginTop: 4,
-    fontWeight: "bold",
-  };
-  const detStyle = {
-    marginTop: 2,
-    fontWeight: "bold",
-  };
-  const descrStyle = {
-    marginTop: 2,
-  };
-  const moreDetStyle = {
-    marginTop: 2,
-  };
   return (
     <>
       <Navbar />
-      <Box className={classes.containerrClass}>
-        <Typography sx={{ fontWeight: "bold", fontSize: 60 }}>
-          परिचय -
-        </Typography>
-        <Typography sx={clgStyle} className={classes.clgClass}>
+      <div className="containerrClass">
+        <div className={{ fontWeight: "bold", fontSize: 60 }}>परिचय -</div>
+        <div className="clgClass">
           श्री आत्मानंद जैन इंटर कॉलेज, हस्तिनापुर,मेरठ
-        </Typography>
-        <Typography sx={detStyle}>
+        </div>
+        <div className="detStyle">
           इंटरमीडिएट स्कूल द्वारा स्थापित और अनुदानित एक मान्यता प्राप्त संस्थान
           है
-        </Typography>
-        <Typography sx={descrStyle}>
+        </div>
+        <div className="descrStyle">
           स्कूल उत्तर प्रदेश माध्यमिक शिक्षा परिषद, प्रयागराज से संबद्ध है।
-        </Typography>
-        <Typography sx={moreDetStyle}>
+        </div>
+        <div className="moreDetStyle">
           श्री 1008 आचार्य श्री पूर्णानंद सुरिश्वर् जी महाराज के शिष्य रत्न महान
           तपस्वी, अनेक तीर्थधारक्, समाज सुधारक, शिक्षा प्रचारक एवं श्री जैन
           शवेतांबर महासभा उत्तर प्रदेश के संस्थापक परम श्रधेय जैनाचार्य श्री
@@ -81,22 +62,19 @@ const About = () => {
           कि दूसरों की भलाई और सुरक्षा हमेशा हमारे सामने आती है। कुछ ऐसे भी हैं
           जो सफलता का सपना देखते हैं, और कुछ ऐसे भी हैं जो जागते हैं और अपना
           सर्वश्रेष्ठ प्रदर्शन करते हैं।”
-        </Typography>
-      </Box>
-      <Box
-        sx={{
+        </div>
+      </div>
+      <div
+        style={{
           // position: "fixed",
           bottom: "0",
           width: "100%",
         }}
       >
         <Footer />
-      </Box>
+      </div>
     </>
   );
 };
 
 export default About;
-
-// const theme = createTheme();
-const useStyles = makeStyles((theme) => styleObj);
