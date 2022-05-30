@@ -20,8 +20,8 @@ export const Footer = () => {
     <div
       style={{
         background: 'url("./images/cool-background.png")',
-        // backgroundRepeat: "no-repeat",
-        // backgroundSize: "100vw 100vh",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "100vw 100vh",
       }}
       className="footer-container"
     >

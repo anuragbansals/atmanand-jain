@@ -1,18 +1,18 @@
-import { Button } from "@material-ui/core";
+// import { Button } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import Cookie from "universal-cookie";
-import Login from "../Login/Login";
+// import { useNavigate } from "react-router-dom";
+// import Cookie from "universal-cookie";
+// import Login from "../Login/Login";
 import "./style.css"
 
 const Navbar = () => {
-  const cookie = new Cookie();
-  const token = cookie.get("token");
-  const navigate = useNavigate();
-  const handleAdmin = () => {
-    navigate("/admin");
-  };
+  // const cookie = new Cookie();
+  // const token = cookie.get("token");
+  // const navigate = useNavigate();
+  // const handleAdmin = () => {
+  //   navigate("/admin");
+  // };
   return (
     <>
       <nav style={{backgroundColor: "#F7F9BC"}} className="navbar navbar-expand-lg navbar-light bg-light">
@@ -93,12 +93,12 @@ const Navbar = () => {
                   संपर्क करें
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Login />
               </li>
               {typeof token !== "undefined" && (
                 <Button onClick={handleAdmin}>Admin</Button>
-              )}
+              )} */}
             </ul>
           </div>
         </div>

@@ -1,129 +1,46 @@
-import { Box, Typography } from "@material-ui/core";
+// import { div, div } from "@material-ui/core";
 import React from "react";
-import { makeStyles } from "@mui/styles";
+// import { makeStyles } from "@mui/styles";
 // import { createTheme } from "@material-ui/core";
-import { styleObj } from "./style";
+// import { styleObj } from "./style";
 import Navbar from "../Navbar/Navbar";
 
 const Gallery = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-    <Box>
+    <div>
       <Navbar />
-      {/* <Navbarr/> */}
-      <Box className={classes.school}>
-        <Typography className={classes.schoolText}>
+      <div className="school">
+        <div className="schoolText">
           {" "}
           श्री आत्मानंद जैन इंटर कॉलेज, हस्तिनापुर,मेरठ
-        </Typography>
-        {/* <Typography className={classes.schoolText} > हस्तिनापुर,मेरठ</Typography> */}
-      </Box>
-      <Box className={classes.shlokBox}>
-        <Typography className={classes.shlokText}>श्री महावीराय नमः</Typography>
-      </Box>
-      <Box className={classes.photo}>
-        {/* <div
-        id="carouselExampleControls"
-        className="carousel slide"
-        data-bs-ride="carousel"
-        style={{
-          width: "100%",
-          height: "100%",
-        }}
-      >
-        <div
-          className="carousel-inner"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <div
-            className="carousel-item active"
-            style={{
-              width: "100%",
-              height: "100%",
-            }}
-          >
-            <img
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-              src="./images/man_1.jfif"
-              className="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-              src="./images/man_2.jfif"
-              className="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-              src="./images/man_3.jfif"
-              className="d-block w-100"
-              alt="..."
-            />
-          </div>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div> */}
+      </div>
+      <div className="shlokBox">
+        <div className="shlokText">श्री महावीराय नमः</div>
+      </div>
+      <div className="photo">
         <img
-        alt=""
+          alt=""
           src="./images/maharaj.jpeg"
           style={{
             width: "100%",
             height: "100%",
           }}
         />
-        <Box className={classes.name}>
-          <Typography className={classes.text}>
+        <div className="pic-name">
+          <div className="pic-text">
             परम श्रधेय जैनाचार्य श्री श्री 1008 श्रीमद् विजय प्रकाशचंद सुरिश्वर्
             जी महाराज
-          </Typography>
-        </Box>
-      </Box>
-    </Box>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default Gallery;
 
 // const theme = createTheme();
-const useStyles = makeStyles((theme) => styleObj);
+// const useStyles = makeStyles((theme) => styleObj);
