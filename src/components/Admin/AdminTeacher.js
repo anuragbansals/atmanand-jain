@@ -1,20 +1,18 @@
 import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import { data } from "./sample";
 import { Avatar, Box, Button, Modal, Typography } from "@material-ui/core";
 import "./admin.css";
 import * as Yup from "yup";
-import { ThemeProvider, makeStyles } from "@mui/styles";
-import { createTheme } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
+// import { createTheme } from "@material-ui/core";
 import { Field, Form, Formik } from "formik";
 import { styleObj } from "./style";
 import axios from "axios";
 import { connect, useDispatch } from "react-redux";
 import { editProfile } from "../../redux/actions/editProfileAction";
-import AddTeacher from "./AddTeacher"
+import AddTeacher from "./AddTeacher";
 import { deleteTeacher } from "../../redux/actions/deleteTeacherAction";
 import { getTeacher } from "../../redux/actions/getTeachersAction";
-
 
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -39,10 +37,12 @@ function AdminTeacher(props) {
     picture: "",
     designation: "",
   });
+  const dispatch = useDispatch();
+
   React.useEffect(() => {
     setSelectedImage(selectedTeacher.picture);
-    dispatch(getTeacher())
-  }, []);
+    dispatch(getTeacher());
+  }, [dispatch, selectedTeacher.picture]);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const handleClick = (id) => {
@@ -50,12 +50,11 @@ function AdminTeacher(props) {
     setSelectedTeacher(id.row);
     handleOpen();
   };
+  console.log(imageUrl);
   const handleDelete = (id) => {
-    console.log('ahaha')
-    dispatch(deleteTeacher(id.id))
-  }
+    dispatch(deleteTeacher(id.id));
+  };
   const classes = useStyles();
-  const dispatch = useDispatch()
   const handleUpload = () => {
     const formData = new FormData();
     formData.append("file", selectedImage);
@@ -106,7 +105,7 @@ function AdminTeacher(props) {
       renderCell: (params) => {
         return (
           <>
-          {console.log(params)}
+            {console.log(params)}
             <Avatar src={params.row.image} />
           </>
         );
@@ -159,15 +158,15 @@ function AdminTeacher(props) {
           initialValues={selectedTeacher}
           validationSchema={validationSchema}
           onSubmit={(values) => {
-            dispatch(editProfile(values))
-            console.log(values)
+            dispatch(editProfile(values));
+            console.log(values);
           }}
         >
           {({ errors, touched }) => (
             <Form>
               <Box className={classes.formContainer}>
-                <Box className={classes.close} >
-                  <Button onClick={handleClose} >X</Button>
+                <Box className={classes.close}>
+                  <Button onClick={handleClose}>X</Button>
                 </Box>
                 <Avatar
                   className={classes.avatar}
@@ -208,10 +207,13 @@ function AdminTeacher(props) {
                   type="file"
                 />
                 {uploaded && (
-                  <div style={{
-                    width: "20vw",
-                    marginLeft: "15vw"
-                  }} className="progress mt-2">
+                  <div
+                    style={{
+                      width: "20vw",
+                      marginLeft: "15vw",
+                    }}
+                    className="progress mt-2"
+                  >
                     <div
                       className="progress-bar"
                       role="progressbar"
@@ -253,20 +255,19 @@ function AdminTeacher(props) {
           )}
         </Formik>
       </Modal>
-      <AddTeacher/>
+      <AddTeacher />
     </div>
   );
 }
 
-const theme = createTheme();
+// const theme = createTheme();
 const useStyles = makeStyles((theme) => styleObj);
-
 
 const mapStateToProps = (state) => {
   console.log(state);
   return {
-    teachers: state.teachers
-  }
-}
+    teachers: state.teachers,
+  };
+};
 
-export default connect(mapStateToProps)(AdminTeacher)
+export default connect(mapStateToProps)(AdminTeacher);

@@ -1,13 +1,13 @@
 import * as types from "../config/actionType"
 import * as actions from "../actions/editProfileAction"
 import * as service from "../service/editProfileService"
-import {all, takeEvery, call, put} from "redux-saga/effects"
+import { takeEvery, call, put} from "redux-saga/effects"
 
 function* edit(data){
     try{
         let response = yield call(service.editProfile, data)
         console.log(response)
-        // yield put(actions.editedProfile(response))
+        yield put(actions.editedProfile(response))
     }catch(err){
         console.log(err)
     }

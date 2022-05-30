@@ -13,7 +13,7 @@ const GalleryScreen = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPhotos());
-  }, []);
+  }, [dispatch]);
   return (
     <>
     <Navbar/>

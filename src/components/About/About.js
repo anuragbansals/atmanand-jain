@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { ThemeProvider, makeStyles } from "@mui/styles";
-import { createTheme } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
+// import { createTheme } from "@material-ui/core";
 import { styleObj } from "./style";
 import { Footer } from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
@@ -98,5 +98,5 @@ const About = () => {
 
 export default About;
 
-const theme = createTheme();
+// const theme = createTheme();
 const useStyles = makeStyles((theme) => styleObj);

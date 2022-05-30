@@ -22,28 +22,14 @@ const Message = () => {
     width: "100%",
     height: "100%",
   };
-  const containerStyle = {
-    marginTop: "20vh",
-    display: "flex",
-    // alignItems:'center',
-    justifyContent: "center",
-    height: "50vh",
-    // border: "1px solid black",
-    marginBottom: "2vh",
-  };
-  const rightStyle = {
-    width: "70vw",
-    paddingLeft: 7,
-    // border: "1px solid",
-    paddingRight: 3,
-  };
+ 
   return (
     <>
       <ThemeProvider theme={theme}>
         <Navbar />
         <Box className={classes.containerr}>
           <Box className={classes.image} sx={imgStyle}>
-            <img style={image} src="./images/manag.jpeg" />
+            <img alt="" style={image} src="./images/manag.jpeg" />
           </Box>
           <Box className={classes.rightStyle}>
             <Typography

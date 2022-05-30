@@ -1,8 +1,8 @@
 import { Box, Button, Modal, Typography } from "@material-ui/core";
 import { Field, Form, Formik } from "formik";
 import React from "react";
-import { ThemeProvider, makeStyles } from "@mui/styles";
-import { createTheme } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
+// import { createTheme } from "@material-ui/core";
 import { styleObj } from "./style";
 
 import * as Yup from "yup";
@@ -98,5 +98,5 @@ const Login = () => {
 };
 
 export default Login;
-const theme = createTheme();
+// const theme = createTheme();
 const useStyles = makeStyles((theme) => styleObj);

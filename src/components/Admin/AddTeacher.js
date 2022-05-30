@@ -4,8 +4,8 @@ import { Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import axios from "axios";
-import { ThemeProvider, makeStyles } from "@mui/styles";
-import { createTheme } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
+// import { createTheme } from "@material-ui/core";
 import { styleObj } from "./style";
 import { Avatar, Box, Button, Modal, Typography } from "@material-ui/core";
 import { addTeacher } from "../../redux/actions/addTeacherAction";
@@ -48,7 +48,6 @@ export default function AddTeacher() {
         }
       )
       .then((response) => {
-        console.log(response);
         setImageUrl(response.data.url);
       });
   };
@@ -183,5 +182,5 @@ export default function AddTeacher() {
     </div>
   );
 }
-const theme = createTheme();
+// const theme = createTheme();
 const useStyles = makeStyles((theme) => styleObj);

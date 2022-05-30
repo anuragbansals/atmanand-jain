@@ -1,15 +1,13 @@
 import React from "react";
 // import useFirestore from "../hooks/useFirestore";
-import { motion, MotionConfig } from "framer-motion";
+import { motion } from "framer-motion";
 import { connect, useSelector } from "react-redux";
 import "./style.css";
-import Navbar from "../Navbar/Navbar";
 import { Box } from "@mui/material";
 
 function ImageGrid({ setSelectedImg }) {
   //   const {docs} = useFirestore("images");
   const docs = useSelector((state) => state.photos.action);
-  console.log(docs);
   if (typeof docs === "undefined") {
     return (
       <Box

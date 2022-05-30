@@ -24,7 +24,6 @@ const AddPhotos = () => {
         }
       )
       .then((response) => {
-        console.log(response);
         setImageUrl(response.data);
       });
   };

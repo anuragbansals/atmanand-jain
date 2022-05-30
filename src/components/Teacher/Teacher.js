@@ -1,10 +1,10 @@
-import { Box, Typography } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux";
 import { getTeacher } from "../../redux/actions/getTeachersAction";
 import Card from "./Card";
-import { ThemeProvider, makeStyles } from "@mui/styles";
-import { createTheme } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
+// import { createTheme } from "@material-ui/core";
 import { styleObj } from "./style";
 import "./style.css";
 import Navbar from "../Navbar/Navbar";
@@ -15,7 +15,7 @@ const Teacher = (props) => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getTeacher());
-  }, []);
+  }, [dispatch]);
   const classes = useStyles();
   let sortedData = [];
   const sortDataBy = (data) => {
@@ -83,5 +83,4 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps)(Teacher);
 
-const theme = createTheme();
 const useStyles = makeStyles((theme) => styleObj);

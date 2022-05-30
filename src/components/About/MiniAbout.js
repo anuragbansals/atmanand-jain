@@ -1,13 +1,12 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import { ThemeProvider, makeStyles } from "@mui/styles";
-import { createTheme } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
+// import { createTheme } from "@material-ui/core";
 import { styleObj } from "./style";
 import { useDispatch } from "react-redux";
 import { getPhotos } from "../../redux/actions/photosAction";
 import { getTeacher } from "../../redux/actions/getTeachersAction";
-import Navbar from "../Navbar/Navbar";
 
 const MiniAbout = () => {
   const classes = useStyles();
@@ -16,7 +15,7 @@ const MiniAbout = () => {
   React.useEffect(() => {
     dispatch(getPhotos());
     dispatch(getTeacher());
-  }, []);
+  }, [dispatch]);
   const clgStyle = {
     //   marginTop:4
   };
@@ -68,5 +67,5 @@ const MiniAbout = () => {
 
 export default MiniAbout;
 
-const theme = createTheme();
+// const theme = createTheme();
 const useStyles = makeStyles((theme) => styleObj);

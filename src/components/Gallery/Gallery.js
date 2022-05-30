@@ -1,7 +1,7 @@
 import { Box, Typography } from "@material-ui/core";
 import React from "react";
-import { ThemeProvider, makeStyles } from "@mui/styles";
-import { createTheme } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
+// import { createTheme } from "@material-ui/core";
 import { styleObj } from "./style";
 import Navbar from "../Navbar/Navbar";
 
@@ -105,6 +105,7 @@ const Gallery = () => {
         </button>
       </div> */}
         <img
+        alt=""
           src="./images/maharaj.jpeg"
           style={{
             width: "100%",
@@ -124,5 +125,5 @@ const Gallery = () => {
 
 export default Gallery;
 
-const theme = createTheme();
+// const theme = createTheme();
 const useStyles = makeStyles((theme) => styleObj);

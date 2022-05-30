@@ -4,16 +4,14 @@ import Navbar from "../Navbar/Navbar";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from "@mui/icons-material/Call";
-import { ThemeProvider, makeStyles } from "@mui/styles";
-import { createTheme } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
+// import { createTheme } from "@material-ui/core";
 import { styleObj } from "./style";
 import { Footer } from "../Footer/Footer";
 
 const Contact = () => {
   const classes = useStyles();
-  const addressStyle = {
-    border: "1px solid",
-  };
+  
   return (
     <>
       <Navbar />
@@ -58,5 +56,5 @@ const Contact = () => {
 
 export default Contact;
 
-const theme = createTheme();
+// const theme = createTheme();
 const useStyles = makeStyles((theme) => styleObj);
