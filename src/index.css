@@ -4,15 +4,17 @@
     margin-top: 10vh;
 }
 
-.clgClass, .detStyle{
+.clgClass,
+.detStyle {
     margin-top: 10px;
     font-weight: bold;
 }
 
-.descrStyle{
+.descrStyle {
     margin-top: 10px;
 }
-.moreDetStyle{
+
+.moreDetStyle {
     margin-top: 10px;
 }
 
@@ -20,4 +22,84 @@
     padding: 20px;
     background-color: #F7F9BC;
     margin-top: 10vh;
+}
+
+
+.footer-container {
+    /* border: 1px solid; */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    /* background: url("./images/cool-background.png"); */
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+.footer-detailClass {
+    flex-direction: column;
+    display: flex;
+    width: 30vw;
+    padding: 20px;
+}
+
+
+
+
+.footer-name{
+    font-weight: bold;
+}
+.footer-textClass{
+    margin-top: 20px;
+}
+.linksClass{
+    width: 30vw;
+    padding: 20px;
+
+}
+.optionsClass{
+    margin-top: 10;
+}
+.optionsClass:hover{
+    cursor: pointer;
+    color: blue;
+}
+.contactClass{
+    padding: 20px;
+
+}
+.contact{
+    font-weight: bold;
+}
+.locationClass{
+    display: flex;
+    margin-top: 10;
+}
+.callClass{
+    display: flex;
+    margin-top: 10;
+}
+.emailClass{
+    display: flex;
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .footer-container {
+        flex-direction: column;
+
+    }
+
+    .footer-detailClass {
+        width: 90vw;
+        margin: auto;
+        /* border: 1px solid; */
+    }
+    .linksClass{
+        width: 90vw;
+        margin: auto;
+    }
+    .contactClass{
+        width: 90vw;
+        margin: auto;
+    }
 }

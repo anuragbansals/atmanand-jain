@@ -1,60 +1,79 @@
-import { Box, Typography } from "@material-ui/core";
+// import { div, div } from "@material-ui/core";
 import React from "react";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
-import { ThemeProvider, makeStyles } from "@mui/styles";
-import { createTheme } from "@material-ui/core";
-import { styleObj } from "./style";
+// import { ThemeProvider, makeStyles } from "@mui/styles";
+// import { createTheme } from "@material-ui/core";
+// import { styleObj } from "./style";
 import { useNavigate } from "react-router-dom";
 
-
 export const Footer = () => {
-  const classes = useStyles();
-  const navigate = useNavigate()
+  // const classes = useStyles();
+  const navigate = useNavigate();
   const clgDetStyle = {
     // marginTop: 4,
     // border: "1px solid"
-  }
+  };
   return (
-    <ThemeProvider theme={theme}>
-      <Box className={classes.containerClass}>
-        <Box className={classes.detailClass}>
-          <Box sx={{fontWeight:"bold"}} >श्री आत्मानंद जैन इंटर कॉलेज</Box>
-          <Typography className={classes.nameClass} >हस्तिनापुर, जिला मेरठ</Typography>
-          <Typography  className={classes.textClass} sx={clgDetStyle}>
-            इंटरमीडिएट स्कूल द्वारा स्थापित और अनुदानित एक मान्यता प्राप्त
-            संस्थान है स्कूल उत्तर प्रदेश माध्यमिक शिक्षा परिषद, प्रयागराज से
-            संबद्ध है।
-          </Typography>
-        </Box>
-        <Box className={classes.linksClass}>
-          <Typography sx={{fontWeight: "bold"}} className={classes.impLinkClass} >महत्वपूर्ण लिंक्स</Typography>
-          <Typography className={classes.optionsClass} onClick={()=>navigate('/gallery')}  >गैलरी</Typography>
-          <Typography className={classes.optionsClass} onClick={()=>navigate('/about')}  >विद्यालय के बार में</Typography>
-          <Typography className={classes.optionsClass} onClick={()=>navigate('/faculties')}  >हमारे अध्यापक</Typography>
-          {/* <Typography className={classes.optionsClass} onClick={()=>navigate('/manager')}  >प्रबन्धक संदेश</Typography>
-          <Typography className={classes.optionsClass} onClick={()=>navigate('/message')}  >प्रधानाचार्य संदेश</Typography> */}
-        </Box>
-        <Box className={classes.contactClass} >
-          <Typography className={classes.contact} >जानकारी</Typography>
-          <Box className={classes.locationClass} >
-            <FmdGoodIcon />
-            <Typography style={{marginLeft:10}} >हस्तिनापुर, जिला मेरठ</Typography>
-          </Box>
-          <Box className={classes.callClass} >
-            <CallIcon />
-            <Typography style={{marginLeft:10}} >(+91)8077813113, 9027062497</Typography>
-          </Box>
-          <Box className={classes.emailClass} >
-            <EmailIcon />
-            <Typography style={{marginLeft:10}} >sajhastinapur@gmail.com</Typography>
-          </Box>
-        </Box>
-      </Box>
-    </ThemeProvider>
+    // <ThemeProvider theme={theme}>
+    <div
+      style={{
+        background: 'url("./images/cool-background.png")',
+        // backgroundRepeat: "no-repeat",
+        // backgroundSize: "100vw 100vh",
+      }}
+      className="footer-container"
+    >
+      <div className="footer-detailClass">
+        <div
+          style={{
+            fontWeight: "bold",
+          }}
+        >
+          श्री आत्मानंद जैन इंटर कॉलेज
+        </div>
+        <div className="footer-name">हस्तिनापुर, जिला मेरठ</div>
+        <div className="footer-textClass" sx={clgDetStyle}>
+          इंटरमीडिएट स्कूल द्वारा स्थापित और अनुदानित एक मान्यता प्राप्त संस्थान
+          है स्कूल उत्तर प्रदेश माध्यमिक शिक्षा परिषद, प्रयागराज से संबद्ध है।
+        </div>
+      </div>
+      <div className="linksClass">
+        <div style={{ fontWeight: "bold" }} className="impLinkClass">
+          महत्वपूर्ण लिंक्स
+        </div>
+        <div className="optionsClass" onClick={() => navigate("/about")}>
+          विद्यालय के बार में
+        </div>
+        <div className="optionsClass" onClick={() => navigate("/faculties")}>
+          हमारे अध्यापक
+        </div>
+        <div className="optionsClass" onClick={() => navigate("/gallery")}>
+          गैलरी
+        </div>
+        {/* <div className={classes.optionsClass} onClick={()=>navigate('/manager')}  >प्रबन्धक संदेश</div>
+          <div className={classes.optionsClass} onClick={()=>navigate('/message')}  >प्रधानाचार्य संदेश</div> */}
+      </div>
+      <div className="contactClass">
+        <div className="contact">जानकारी</div>
+        <div className="locationClass">
+          <FmdGoodIcon />
+          <div style={{ marginLeft: 10 }}>हस्तिनापुर, जिला मेरठ</div>
+        </div>
+        <div className="callClass">
+          <CallIcon />
+          <div style={{ marginLeft: 10 }}>(+91)8077813113, 9027062497</div>
+        </div>
+        <div className="emailClass">
+          <EmailIcon />
+          <div style={{ marginLeft: 10 }}>sajhastinapur@gmail.com</div>
+        </div>
+      </div>
+    </div>
+    // </ThemeProvider>
   );
 };
 
-const theme = createTheme();
-const useStyles = makeStyles((theme) => styleObj);
+// const theme = createTheme();
+// const useStyles = makeStyles((theme) => styleObj);
