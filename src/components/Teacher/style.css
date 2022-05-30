@@ -1,0 +1,52 @@
+.makeStyles-grid-5 {
+    padding: "0px"
+}
+
+.MuiBox-root.MuiBox-root-2.makeStyles-grid-5 {
+    padding: 0px;
+}
+
+.eAyARa {
+    box-shadow: none;
+}
+
+button.rec-arrow-left{
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    display: none;
+}
+
+button.rec-arrow-right {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    display: none;
+}
+button.rec-arrow-right:active{
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+button.rec-arrow-right:focus{
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+button.rec-arrow-right:hover{
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+@media (min-width: 0px) and (max-width: 599.95px) {
+
+    .makeStyles-grid-5 {
+        flex-direction: column;
+        padding: 0px;
+    }
+}
+
+.eWjCzc:hover:enabled .eWjCzc:focus:enabled{
+    background-color: transparent;
+}

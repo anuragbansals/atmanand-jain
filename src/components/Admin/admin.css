@@ -1,0 +1,7 @@
+ /* .MuiDataGrid-row:hover{
+    cursor: pointer;
+} */
+
+css-1xy1myn-MuiDataGrid-root .MuiDataGrid-row{
+    background-color: red;
+}
