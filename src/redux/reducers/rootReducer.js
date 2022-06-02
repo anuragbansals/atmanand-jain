@@ -5,6 +5,7 @@ import { deleteTeacherReducer } from "./deleteTeacherReducer";
 import { editProfileReducer } from "./editProfileReducer";
 import { getTeachersReducer } from "./getTeachersReducer";
 import { loginReducer } from "./loginReducer";
+import { addWorkerReducer, getworkerReducer } from "./workerReducer";
 
 export default combineReducers({
     editedProfile: editProfileReducer,
@@ -13,5 +14,7 @@ export default combineReducers({
     user: loginReducer,
     teachers: getTeachersReducer,
     photo: addPhotoReducer,
-    photos: getPhotoReducer
+    photos: getPhotoReducer,
+    workers: getworkerReducer,
+    addedWorker: addWorkerReducer
 })

@@ -6,7 +6,6 @@ import Gallery from "../Gallery/Gallery";
 const Home = () => {
   return (
     <>
-      {/* <Navbar /> */}
       <Gallery />
       <MiniAbout />
       <Footer />

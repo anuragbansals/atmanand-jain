@@ -1,25 +1,25 @@
-import { Box } from "@material-ui/core";
-// import { Box } from "@mui/material";
 import React from "react";
 
-const Title = () => {
+const Title = (props) => {
   return (
-    <Box sx={{
+    <div
+      style={{
         // border: "1px solid black",
-        padding:"10px",
-        height: "10vh",
+        padding: "10px",
+        height: "5vh",
         display: "flex",
-        justifyContent: "center"
-    }} >
+        justifyContent: "center",
+      }}
+    >
       <div
         style={{
           fontWeight: "bold",
           fontSize: 40,
         }}
       >
-        हमारे शिक्षक
+        {props.title}
       </div>
-    </Box>
+    </div>
   );
 };
 

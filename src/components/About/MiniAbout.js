@@ -1,32 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { makeStyles } from "@mui/styles";
-// import { createTheme } from "@material-ui/core";
-// import { styleObj } from "./style";
+
 import { useDispatch } from "react-redux";
 import { getPhotos } from "../../redux/actions/photosAction";
 import { getTeacher } from "../../redux/actions/getTeachersAction";
+import { getWorker } from "../../redux/actions/workerAction";
 
 const MiniAbout = () => {
-  // const classes = useStyles();
   const dispatch = useDispatch();
 
   React.useEffect(() => {
     dispatch(getPhotos());
     dispatch(getTeacher());
+    dispatch(getWorker())
   }, [dispatch]);
-  // const clgStyle = {
-  //   //   marginTop:4
-  // };
-  // const detStyle = {
-  //   marginTop: 2,
-  // };
-  // const descrStyle = {
-  //   marginTop: 2,
-  // };
-  // const moreDetStyle = {
-  //   marginTop: 2,
-  // };
   return (
     <>
       <div className="containerClass">
@@ -65,6 +52,3 @@ const MiniAbout = () => {
 };
 
 export default MiniAbout;
-
-// const theme = createTheme();
-// const useStyles = makeStyles((theme) => styleObj);

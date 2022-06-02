@@ -1,13 +1,8 @@
-// import { div, div } from "@material-ui/core";
 import React from "react";
-// import { makeStyles } from "@mui/styles";
-// import { createTheme } from "@material-ui/core";
-// import { styleObj } from "./style";
+
 import Navbar from "../Navbar/Navbar";
 
 const Gallery = () => {
-  // const classes = useStyles();
-
   return (
     <div>
       <Navbar />
@@ -41,6 +36,3 @@ const Gallery = () => {
 };
 
 export default Gallery;
-
-// const theme = createTheme();
-// const useStyles = makeStyles((theme) => styleObj);

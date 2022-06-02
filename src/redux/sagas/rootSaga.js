@@ -5,6 +5,7 @@ import { watchEditProfile } from "./editProfileSaga";
 import { watchGetTeacher } from "./getTeacherSaga";
 import { watchLoginUser } from "./loginSaga";
 import { watchAddPhoto, watchGetPhotos } from "./photoSaga";
+import { watchAddWorker, watchGetWorker } from "./workerSaga";
 
 function* rootSaga() {
   yield all([
@@ -15,6 +16,8 @@ function* rootSaga() {
     watchGetTeacher(),
     watchAddPhoto(),
     watchGetPhotos(),
+    watchAddWorker(),
+    watchGetWorker(),
   ]);
 }
 

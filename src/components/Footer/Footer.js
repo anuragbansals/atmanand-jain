@@ -1,22 +1,13 @@
-// import { div, div } from "@material-ui/core";
 import React from "react";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
-// import { ThemeProvider, makeStyles } from "@mui/styles";
-// import { createTheme } from "@material-ui/core";
-// import { styleObj } from "./style";
+
 import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
-  // const classes = useStyles();
   const navigate = useNavigate();
-  const clgDetStyle = {
-    // marginTop: 4,
-    // border: "1px solid"
-  };
   return (
-    // <ThemeProvider theme={theme}>
     <div
       style={{
         background: 'url("./images/cool-background.png")',
@@ -34,7 +25,7 @@ export const Footer = () => {
           श्री आत्मानंद जैन इंटर कॉलेज
         </div>
         <div className="footer-name">हस्तिनापुर, जिला मेरठ</div>
-        <div className="footer-textClass" sx={clgDetStyle}>
+        <div className="footer-textClass">
           इंटरमीडिएट स्कूल द्वारा स्थापित और अनुदानित एक मान्यता प्राप्त संस्थान
           है स्कूल उत्तर प्रदेश माध्यमिक शिक्षा परिषद, प्रयागराज से संबद्ध है।
         </div>
@@ -67,13 +58,21 @@ export const Footer = () => {
         </div>
         <div className="emailClass">
           <EmailIcon />
-          <div style={{ marginLeft: 10 }}>sajhastinapur@gmail.com</div>
+          <div style={{ marginLeft: 10 }}>
+            <a
+              href="mailto: sajhastinapur@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                textDecoration: "none",
+                color: "#212529",
+              }}
+            >
+              sajhastinapur@gmail.com
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    // </ThemeProvider>
   );
 };
-
-// const theme = createTheme();
-// const useStyles = makeStyles((theme) => styleObj);

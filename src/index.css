@@ -1,7 +1,7 @@
 .containerrClass {
     padding: 20px;
     background-color: #F7F9BC;
-    margin-top: 10vh;
+    margin-top: 4vh;
 }
 
 .clgClass,
@@ -79,17 +79,17 @@
 
 .locationClass {
     display: flex;
-    margin-top: 10;
+    margin-top: 10px;
 }
 
 .callClass {
     display: flex;
-    margin-top: 10;
+    margin-top: 10px;
 }
 
 .emailClass {
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .pic-name {
@@ -130,6 +130,176 @@
     margin-top: 2vh;
 }
 
+.worker-container{
+    height: 35vh;
+    width: 15vw;
+    /* background-color: #faf6f5; */
+    background-color: #FCF69E;
+    /* background: url("./images/cool-background.png"); */
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.worker-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.05);
+    background-color: #F7F9BC;
+}
+
+.teacher-container {
+    height: 45vh;
+    width: 15vw;
+    /* background-color: #faf6f5; */
+    background-color: #FCF69E;
+    /* background: url("./images/cool-background.png"); */
+
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.teacher-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.05);
+    background-color: #F7F9BC;
+
+}
+
+/* .teacher-container img:hover {
+    
+} */
+
+.teacher-image {
+    width: 15vw;
+    height: 25vh;
+}
+
+.teacher-name,
+.teacher-designation {
+    margin-left: 20px;
+    align-content: center;
+    width: 13vw;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.teacher-designation {
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.teacher-degree {
+    margin-left: 10px;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.teacher-phone {
+    /* margin-left: 10px; */
+    display: flex;
+    justify-content: center;
+}
+
+.message-container {
+    margin-top: 16vh;
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    margin-bottom: 2vh;
+    /* margin: auto; */
+    margin-left: 10vw;
+    width: 80vw;
+    /* border: 1px solid black; */
+}
+
+.message-heading-1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.message-heading-2 {
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.message-descr {
+    margin-top: 2px;
+}
+
+.message-by {
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+.message-image {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.message-rightStyle {
+    width: 70vw;
+    padding-left: 10px;
+    margin-left: 20px;
+    padding-right: 5px;
+}
+
+.message-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-containerClass {
+    display: flex;
+    height: 70vh;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F9BC;
+}
+
+.contact-locationClass,
+.contact-emailClass,
+.contact-callClass {
+    display: flex;
+    border: 1px solid;
+    width: 25vw;
+    padding: 15px;
+}
+
+.teacher-grid{
+    padding: 50px;
+    margin-top: 20px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f7f9bc;
+}
+.worker-grid{
+    padding: 50px;
+    margin-top: 20px;
+    /* margin-top: 100%; */
+    padding-bottom: 120px;
+    /* margin-bottom: 20px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f7f9bc;
+    /* border: 1px solid; */
+}
+
 @media screen and (max-width: 800px) {
     .footer-container {
         flex-direction: column;
@@ -156,5 +326,56 @@
         width: 80vw;
         height: 40vh;
         margin-left: 10vw;
+    }
+
+    .teacher-container {
+        width: 70vw;
+        margin-right: 5vw;
+        height: 43vh
+    }
+    .worker-container {
+        width: 70vw;
+        margin-right: 5vw;
+        height: 35vh
+    }
+
+    .teacher-image {
+        width: 80vw;
+    }
+
+    .teacher-name,
+    .teacher-designation {
+        width: 80vw;
+        margin-left: 0px;
+    }
+
+    .message-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10vh;
+        height: 100%;
+    }
+
+    .message-heading-1 {
+        margin-top: 15px;
+        font-size: 30px;
+    }
+
+    .contact-containerClass {
+        background-size: 100vw 100vh;
+        flex-direction: column;
+    }
+
+    .contact-locationClass,
+    .contact-emailClass,
+    .contact-callClass {
+        width: 70%;
+    }
+    .teacher-grid{
+        flex-direction: column;
+    }
+    .worker-grid{
+        flex-direction: column;
     }
 }

@@ -9,7 +9,9 @@ import Home from "./components/Home/Home";
 import AdminTeacher from "./components/Admin/AdminTeacher";
 import AddPhotos from "./components/Admin/AddPhotos";
 import GalleryScreen from "./components/Gallery/GalleryScreen";
-// import { Card } from "@mui/material";
+import Workers from "./components/Workers/Workers";
+import AddTeacher from "./components/Admin/AddTeacher";
+import AddWorker from "./components/Admin/AddWorker";
 
 function App() {
   return (
@@ -30,12 +32,11 @@ function App() {
           <Route path="/admin" element={<AdminTeacher />} />
           <Route path="/add-photos" element={<AddPhotos />} />
           <Route path="/manager" element={<Manager />} />
+          <Route path="/other-members" element={<Workers />} />
+          <Route path="/add-teacher" element={<AddTeacher />} />
+          <Route path="/add-worker" element={<AddWorker />} />
         </Routes>
       </div>
-      {/* <AdminPick /> */}
-      {/* <AdminTeacher/> */}
-      {/* <Card/> */}
-      {/* <Teacher/> */}
     </>
   );
 }

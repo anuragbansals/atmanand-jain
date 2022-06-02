@@ -3,9 +3,6 @@ import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux";
 import { getTeacher } from "../../redux/actions/getTeachersAction";
 import Card from "./Card";
-import { makeStyles } from "@mui/styles";
-// import { createTheme } from "@material-ui/core";
-import { styleObj } from "./style";
 import "./style.css";
 import Navbar from "../Navbar/Navbar";
 import { Footer } from "../Footer/Footer";
@@ -16,7 +13,6 @@ const Teacher = (props) => {
   useEffect(() => {
     dispatch(getTeacher());
   }, [dispatch]);
-  const classes = useStyles();
   let sortedData = [];
   const sortDataBy = (data) => {
     sortedData = data.sort(function (a, b) {
@@ -30,7 +26,7 @@ const Teacher = (props) => {
     return (
       <>
         <Navbar />
-        <Title/>
+        <Title title=" हमारे शिक्षक" />
         <Box
           sx={{
             height: "60vh",
@@ -59,8 +55,8 @@ const Teacher = (props) => {
   return (
     <>
       <Navbar />
-      <Title/>
-      <Box className={classes.grid}>
+      <Title title=" हमारे शिक्षक" />
+      <div className="teacher-grid">
         {sortedData.length !== 0 &&
           sortedData.map((teacher) => (
             <Card
@@ -68,9 +64,10 @@ const Teacher = (props) => {
               designation={teacher.designation}
               image={teacher.image}
               edu={teacher.education}
+              phone={teacher.phone}
             />
           ))}
-      </Box>
+      </div>
       <Footer />
     </>
   );
@@ -83,4 +80,3 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps)(Teacher);
 
-const useStyles = makeStyles((theme) => styleObj);

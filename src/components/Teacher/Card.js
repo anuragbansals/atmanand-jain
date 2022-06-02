@@ -1,26 +1,35 @@
-import { Box, Typography } from "@material-ui/core";
-import React from "react";
-import { makeStyles } from "@mui/styles";
-// import { createTheme } from "@material-ui/core";
-import { styleObj } from "./style";
+import React, { useEffect, useState } from "react";
 
 const Card = (props) => {
-  const classes = useStyles();
+  const [workerClass, setWorkerClass] = useState(null);
+  useEffect(()=>{
+    if (window.location.pathname === "/other-members") {
+      setWorkerClass("worker");
+    } else {
+      setWorkerClass("teacher");
+    }
+  },[])
+  
   return (
-    <Box className={classes.container}>
-      <Box className={classes.image} >
-        <img alt="" style={{width:"100%", height: "100%"}} src={props.image} />
-      </Box>
-      <Typography className={classes.name}>{props.name}</Typography>
-      <Typography className={classes.designation}>
-        {props.designation}
-      </Typography>
-      <Typography className={classes.degree}>{props.edu}</Typography>
-    </Box>
+    <div className={`${workerClass}-container`}>
+      <div className="teacher-image">
+        <img
+          alt=""
+          style={{ width: "100%", height: "100%" }}
+          src={props.image}
+        />
+      </div>
+      <div className="teacher-name">{props.name}</div>
+      <div className="teacher-designation">{props.designation}</div>
+
+      {window.location.pathname !== "/other-members" && (
+        <>
+          <div className="teacher-degree">{props.edu}</div>
+          <div className="teacher-phone">Ph- {props.phone}</div>
+        </>
+      )}
+    </div>
   );
 };
 
 export default Card;
-
-// const theme = createTheme();
-const useStyles = makeStyles((theme) => styleObj);

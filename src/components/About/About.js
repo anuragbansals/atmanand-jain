@@ -1,6 +1,4 @@
-// import { div, div } from "@mui/material";
 import React from "react";
-// import { createTheme } from "@material-ui/core";
 import { Footer } from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 
@@ -9,7 +7,7 @@ const About = () => {
     <>
       <Navbar />
       <div className="containerrClass">
-        <div className={{ fontWeight: "bold", fontSize: 60 }}>परिचय -</div>
+        <div style={{ fontWeight: "bold", fontSize: 60 }}>परिचय -</div>
         <div className="clgClass">
           श्री आत्मानंद जैन इंटर कॉलेज, हस्तिनापुर,मेरठ
         </div>
@@ -53,7 +51,7 @@ const About = () => {
           लिए स्कूल कई गतिविधियाँ करता है, जो इसे सर्वश्रेष्ठ स्कूलों में से एक
           की श्रेणी में रखता है। जैसे-जैसे कॉलेज बड़ा हुआ है, यह विज्ञान पीसीबी,
           पीसीएम, वाणिज्य और मानविकी जैसी धाराओं के साथ बारहवीं कक्षा तक के
-          बच्चों की शिक्षा प्रदान करने में सक्षम है। श्री जय सिंह इंटर कॉलेज
+          बच्चों की शिक्षा प्रदान करने में सक्षम है।  श्री आत्मानंद जैन इंटर कॉलेज
           में, हम आपके बच्चे के लिए शिक्षा, चरित्र निर्माण, सह-पाठयक्रम
           गतिविधियों, खेल शिक्षा और जीवन कौशल सहित समग्र शिक्षा पर ध्यान
           केंद्रित करते हैं। हमारा उद्देश्य अत्याधुनिक बुनियादी ढांचे और
@@ -66,7 +64,6 @@ const About = () => {
       </div>
       <div
         style={{
-          // position: "fixed",
           bottom: "0",
           width: "100%",
         }}

@@ -1,25 +1,17 @@
-// import { Button } from "@material-ui/core";
 import React from "react";
-import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
-// import Cookie from "universal-cookie";
-// import Login from "../Login/Login";
-import "./style.css"
+import { Link, useNavigate } from "react-router-dom";
+import HomeIcon from "@mui/icons-material/Home";
+import "./style.css";
 
 const Navbar = () => {
-  // const cookie = new Cookie();
-  // const token = cookie.get("token");
-  // const navigate = useNavigate();
-  // const handleAdmin = () => {
-  //   navigate("/admin");
-  // };
+  const navigate = useNavigate();
   return (
     <>
-      <nav style={{backgroundColor: "#F7F9BC"}} className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        style={{ backgroundColor: "#F7F9BC" }}
+        className="navbar navbar-expand-lg navbar-light bg-light"
+      >
         <div className="container-fluid">
-          {/* <Link className="navbar-brand" to="#">
-            Navbar
-          </Link> */}
           <button
             className="navbar-toggler"
             type="button"
@@ -34,9 +26,15 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" to="/">
-                  होम
-                </Link>
+                <HomeIcon
+                  sx={{
+                    marginTop: 1,
+                    "&:hover": {
+                      cursor: "pointer",
+                    },
+                  }}
+                  onClick={() => navigate("/")}
+                />
               </li>
               <li className="nav-item dropdown">
                 <Link
@@ -58,6 +56,11 @@ const Navbar = () => {
                   <li>
                     <Link className="dropdown-item" to="/faculties">
                       हमारे अध्यापक
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/other-members">
+                      हमारे सहयोगी
                     </Link>
                   </li>
                   <li>
@@ -95,8 +98,8 @@ const Navbar = () => {
               </li>
               {/* <li>
                 <Login />
-              </li>
-              {typeof token !== "undefined" && (
+              </li> */}
+              {/* {typeof token !== "undefined" && (
                 <Button onClick={handleAdmin}>Admin</Button>
               )} */}
             </ul>

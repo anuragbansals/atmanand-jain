@@ -1,17 +1,14 @@
 import React from "react";
-// import useFirestore from "../hooks/useFirestore";
 import { motion } from "framer-motion";
 import { connect, useSelector } from "react-redux";
 import "./style.css";
-import { Box } from "@mui/material";
 
 function ImageGrid({ setSelectedImg }) {
-  //   const {docs} = useFirestore("images");
   const docs = useSelector((state) => state.photos.action);
   if (typeof docs === "undefined") {
     return (
-      <Box
-        sx={{
+      <div
+        style={{
           height: "60vh",
           width: "100vw",
           display: "flex",
@@ -26,7 +23,7 @@ function ImageGrid({ setSelectedImg }) {
         }} class="spinner-grow" role="status">
           <span class="sr-only"></span>
         </div>
-      </Box>
+      </div>
     );
   }
   return (
