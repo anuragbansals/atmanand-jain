@@ -6,7 +6,6 @@ import { takeEvery, call, put} from "redux-saga/effects"
 function* edit(data){
     try{
         let response = yield call(service.editProfile, data)
-        console.log(response)
         yield put(actions.editedProfile(response))
     }catch(err){
         console.log(err)

@@ -6,7 +6,6 @@ import { takeEvery, call, put } from "redux-saga/effects";
 function* addPhoto(data) {
   try {
     let response = yield call(service.addPhoto, data.data);
-    console.log(response);
     yield put(actions.addedPhoto(response));
   } catch (err) {
     console.log(err);
@@ -20,7 +19,6 @@ export function* watchAddPhoto() {
 function* getPhoto() {
   try {
     let response = yield call(service.getPhotos);
-    console.log(response);
     yield put(actions.gotPhotos(response.data));
   } catch (err) {
     console.log(err);

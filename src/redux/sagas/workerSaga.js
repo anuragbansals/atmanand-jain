@@ -6,7 +6,6 @@ import { takeEvery, call, put } from "redux-saga/effects";
 function* add(data) {
   try {
     let response = yield call(service.addWorker, data.data);
-    console.log(response);
     yield put(actions.addedWorker(response));
   } catch (err) {
     console.log(err);
@@ -20,7 +19,6 @@ export function* watchAddWorker() {
 function* getWorker() {
   try {
     let response = yield call(service.getWorkers);
-    console.log(response);
     yield put(actions.gotWorker(response.data));
   } catch (err) {
     console.log(err);

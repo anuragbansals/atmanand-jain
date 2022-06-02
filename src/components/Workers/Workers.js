@@ -41,10 +41,10 @@ const Worker = (props) => {
               width: "100px",
               height: "100px",
             }}
-            class="spinner-grow"
+            className="spinner-grow"
             role="status"
           >
-            <span class="sr-only"></span>
+            <span className="sr-only"></span>
           </div>
         </div>
         <Footer />
@@ -58,11 +58,13 @@ const Worker = (props) => {
       <div className={`${workerClass}-grid`}>
         {props.workers.length !== 0 &&
           props.workers.map((worker) => (
-            <Card
-              name={worker.name}
-              designation={worker.designation}
-              image={worker.image}
-            />
+            <div key={worker.id} >
+              <Card
+                name={worker.name}
+                designation={worker.designation}
+                image={worker.image}
+              />
+            </div>
           ))}
       </div>
       <Footer />

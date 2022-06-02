@@ -12,7 +12,6 @@ export const addPhotoReducer = (state = [], action) => {
 export const getPhotoReducer = (state = [], action) => {
     switch (action.type) {
       case GOT_PHOTOS:
-        console.log(action.action)
         return action;
       default:
         return state;

@@ -20,8 +20,8 @@ function ImageGrid({ setSelectedImg }) {
         <div style={{
             width: "100px",
             height: "100px"
-        }} class="spinner-grow" role="status">
-          <span class="sr-only"></span>
+        }} className="spinner-grow" role="status">
+          <span className="sr-only"></span>
         </div>
       </div>
     );
@@ -54,7 +54,6 @@ function ImageGrid({ setSelectedImg }) {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     docs: state.photos,
   };

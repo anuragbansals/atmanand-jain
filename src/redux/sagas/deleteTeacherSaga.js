@@ -6,7 +6,6 @@ import { takeEvery, call, put} from "redux-saga/effects"
 function* deleteTeacher(data){
     try{
         let response = yield call(service.removeTeacher, data)
-        console.log(response)
         yield put(actions.deletedTeacher(response))
     }catch(err){
         console.log(err)

@@ -6,7 +6,6 @@ import { takeEvery, call, put } from "redux-saga/effects";
 function* get() {
   try {
     let response = yield call(service.fetchTeachers);
-    console.log(response);
     yield put(actions.gotTeacher(response.data));
   } catch (err) {
     console.log(err);
