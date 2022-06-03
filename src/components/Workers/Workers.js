@@ -13,7 +13,6 @@ const Worker = (props) => {
   useEffect(() => {
     dispatch(getWorker());
   }, [dispatch]);
-
   useEffect(() => {
     if (window.location.pathname === "/other-members") {
       setWorkerClass("worker");
@@ -21,6 +20,9 @@ const Worker = (props) => {
       setWorkerClass("teacher");
     }
   }, []);
+  if (props.workers && props.workers.length !== 0) {
+    props.workers.sort((a, b) => a.id - b.id);
+  }
   if (props.workers.length === 0) {
     return (
       <>
@@ -58,7 +60,7 @@ const Worker = (props) => {
       <div className={`${workerClass}-grid`}>
         {props.workers.length !== 0 &&
           props.workers.map((worker) => (
-            <div key={worker.id} >
+            <div key={worker.id}>
               <Card
                 name={worker.name}
                 designation={worker.designation}

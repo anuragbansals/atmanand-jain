@@ -130,13 +130,16 @@
     margin-top: 2vh;
 }
 
-.worker-container{
+.worker-container {
     height: 35vh;
     width: 15vw;
     /* background-color: #faf6f5; */
     background-color: #FCF69E;
     /* background: url("./images/cool-background.png"); */
-    margin-left: 20px;
+    margin-left: 40px;
+    /* margin-right: 40px; */
+    /* display: flex;
+    flex-wrap: wrap; */
     margin-top: 20px;
     border-radius: 10px;
     overflow: hidden;
@@ -161,6 +164,7 @@
     border-radius: 10px;
     overflow: hidden;
     margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 10px;
     transition-property: transform;
     transition-duration: 0.5s;
@@ -278,7 +282,7 @@
     padding: 15px;
 }
 
-.teacher-grid{
+.teacher-grid {
     padding: 50px;
     margin-top: 20px;
     padding-bottom: 0px;
@@ -287,7 +291,8 @@
     justify-content: space-between;
     background-color: #f7f9bc;
 }
-.worker-grid{
+
+.worker-grid {
     padding: 50px;
     margin-top: 20px;
     /* margin-top: 100%; */
@@ -295,7 +300,7 @@
     /* margin-bottom: 20px; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     background-color: #f7f9bc;
     /* border: 1px solid; */
 }
@@ -333,10 +338,13 @@
         margin-right: 5vw;
         height: 43vh
     }
+
     .worker-container {
         width: 70vw;
-        margin-right: 5vw;
-        height: 35vh
+        /* margin-right: 10vw; */
+        height: 35vh;
+        margin-left: 10px;
+
     }
 
     .teacher-image {
@@ -372,10 +380,12 @@
     .contact-callClass {
         width: 70%;
     }
-    .teacher-grid{
+
+    .teacher-grid {
         flex-direction: column;
     }
-    .worker-grid{
+
+    .worker-grid {
         flex-direction: column;
     }
 }
