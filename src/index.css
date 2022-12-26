@@ -181,10 +181,35 @@
     
 } */
 
-.teacher-image {
+/* .teacher-image {
     width: 15vw;
     height: 25vh;
-}
+} */
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+  .teacher-image:hover .image {
+    opacity: 0.3;
+  }
+  
+  .teacher-image:hover .middle {
+    opacity: 1;
+  }
 
 .teacher-name,
 .teacher-designation {
@@ -352,9 +377,10 @@
     }
 
     .teacher-name,
-    .teacher-designation {
-        width: 80vw;
+    .teacher-designation, .teacher-degree {
+        width: 40vw;
         margin-left: 0px;
+        text-align: center;
     }
 
     .message-container {

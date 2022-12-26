@@ -1,14 +1,22 @@
-import * as types from "../config/actionType";
+// import * as types from "../config/actionType";
 
-export const getTeacher = () => {
-  return {
-    type: types.GET_TEACHERS,
-  };
-};
+// export const getTeacherLoading = () => {
+//   return {
+//     type: types.GET_TEACHERS_LOADING,
+//   };
+// };
 
-export const gotTeacher = (action) => {
-  return {
-    type: types.GOT_TEACHERS,
-    action,
-  };
-};
+// export const getTeacherSuccess = (action) => {
+//   return {
+//     type: types.GET_TEACHERS_SUCCESS,
+//     action,
+//   };
+// };
+
+
+// export const getTeacherError = (err) => {
+//   return {
+//     type: types.GET_TEACHERS_ERROR,
+//     err
+//   }
+// }

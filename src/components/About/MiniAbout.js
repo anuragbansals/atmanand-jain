@@ -1,19 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { useDispatch } from "react-redux";
-import { getPhotos } from "../../redux/actions/photosAction";
-import { getTeacher } from "../../redux/actions/getTeachersAction";
-import { getWorker } from "../../redux/actions/workerAction";
-
 const MiniAbout = () => {
-  const dispatch = useDispatch();
 
-  React.useEffect(() => {
-    dispatch(getPhotos());
-    dispatch(getTeacher());
-    dispatch(getWorker());
-  }, [dispatch]);
+ 
   return (
     <>
       <div className="containerClass">

@@ -2,30 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { connect, useSelector } from "react-redux";
 import "./style.css";
+import { docs } from "./dummy";
 
 function ImageGrid({ setSelectedImg }) {
-  const docs = useSelector((state) => state.photos.action);
-  if (typeof docs === "undefined") {
-    return (
-      <div
-        style={{
-          height: "60vh",
-          width: "100vw",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        //   border: "1px solid black",
-        }}
-      >
-        <div style={{
-            width: "100px",
-            height: "100px"
-        }} className="spinner-grow" role="status">
-          <span className="sr-only"></span>
-        </div>
-      </div>
-    );
-  }
+  // const docs = useSelector((state) => state.photos.action);
+
   return (
     <>
       {/* <Navbar /> */}
@@ -53,10 +34,5 @@ function ImageGrid({ setSelectedImg }) {
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    docs: state.photos,
-  };
-};
 
-export default connect(mapStateToProps)(ImageGrid);
+export default (ImageGrid);

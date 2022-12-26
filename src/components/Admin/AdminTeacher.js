@@ -8,11 +8,11 @@ import { makeStyles } from "@mui/styles";
 import { Field, Form, Formik } from "formik";
 import { styleObj } from "./style";
 import axios from "axios";
-import { connect, useDispatch } from "react-redux";
-import { editProfile } from "../../redux/actions/editProfileAction";
+// import { connect, useDispatch } from "react-redux";
+// import { editProfile } from "../../redux/actions/editProfileAction";
 import AddTeacher from "./AddTeacher";
-import { deleteTeacher } from "../../redux/actions/deleteTeacherAction";
-import { getTeacher } from "../../redux/actions/getTeachersAction";
+// import { deleteTeacher } from "../../redux/actions/deleteTeacherAction";
+// import { getTeacher } from "../../redux/actions/getTeachersAction";
 
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -37,12 +37,12 @@ function AdminTeacher(props) {
     picture: "",
     designation: "",
   });
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  React.useEffect(() => {
-    setSelectedImage(selectedTeacher.picture);
-    dispatch(getTeacher());
-  }, [dispatch, selectedTeacher.picture]);
+  // React.useEffect(() => {
+  //   setSelectedImage(selectedTeacher.picture);
+  //   dispatch(getTeacher());
+  // }, [dispatch, selectedTeacher.picture]);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const handleClick = (id) => {
@@ -50,9 +50,9 @@ function AdminTeacher(props) {
     setSelectedTeacher(id.row);
     handleOpen();
   };
-  console.log(imageUrl);
+  // console.log(imageUrl);
   const handleDelete = (id) => {
-    dispatch(deleteTeacher(id.id));
+    // dispatch(deleteTeacher(id.id));
   };
   const classes = useStyles();
   const handleUpload = () => {
@@ -158,7 +158,7 @@ function AdminTeacher(props) {
           initialValues={selectedTeacher}
           validationSchema={validationSchema}
           onSubmit={(values) => {
-            dispatch(editProfile(values));
+            // dispatch(editProfile(values));
             console.log(values);
           }}
         >
@@ -263,11 +263,11 @@ function AdminTeacher(props) {
 // const theme = createTheme();
 const useStyles = makeStyles((theme) => styleObj);
 
-const mapStateToProps = (state) => {
-  console.log(state);
-  return {
-    teachers: state.teachers,
-  };
-};
+// const mapStateToProps = (state) => {
+//   console.log(state);
+//   return {
+//     teachers: state.teachers,
+//   };
+// };
 
-export default connect(mapStateToProps)(AdminTeacher);
+export default (AdminTeacher);

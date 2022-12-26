@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { getPhotos } from "../../redux/actions/photosAction";
+// import { useDispatch } from "react-redux";
+// import { getPhotos } from "../../redux/actions/photosAction";
 import { Footer } from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import ImageGrid from "./ImageGrid";
@@ -10,10 +10,10 @@ import Title from "./Title";
 
 const GalleryScreen = () => {
   const [selectedImg, setSelectedImg] = useState(null);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getPhotos());
-  }, [dispatch]);
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(getPhotos());
+  // }, [dispatch]);
   return (
     <>
     <Navbar/>

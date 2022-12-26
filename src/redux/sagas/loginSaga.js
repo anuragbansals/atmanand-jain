@@ -18,3 +18,4 @@ function* login(data) {
 export function* watchLoginUser() {
   yield takeEvery(types.LOGIN, login);
 }
+

@@ -1,16 +1,16 @@
-import * as types from "../config/actionType"
+// import * as types from "../config/actionType"
 
-export const addTeacher = (data) => {
-    return {
-        type: types.ADD_TEACHER,
-        data
-    }
-}
+// export const addTeacher = (data) => {
+//     return {
+//         type: types.ADD_TEACHER,
+//         data
+//     }
+// }
 
 
-export const addedTeacher = (action) => {
-    return {
-        type: types.ADDED_TEACHER,
-        action
-    }
-}
+// export const addedTeacher = (action) => {
+//     return {
+//         type: types.ADDED_TEACHER,
+//         action
+//     }
+// }

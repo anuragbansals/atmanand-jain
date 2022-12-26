@@ -1,9 +1,29 @@
-import { GOT_TEACHERS } from "../config/actionType";
+import * as types from "../config/actionType";
 
-export const getTeachersReducer = (state = [], action) => {
+const initialState = {
+  error: "",
+  isLoading: false,
+  data: []
+}
+
+export const getTeachersReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GOT_TEACHERS:
-      return action.action;
+    case types.GET_TEACHERS_LOADING:
+      return {
+        ...initialState,
+        isLoading:true,
+      };
+    case types.GET_TEACHERS_SUCCESS:
+      return {
+        ...initialState,
+        isLoading:false,
+        data: action.payload
+      }
+    case types.GET_TEACHERS_ERROR:
+      return {
+        isLoading:false,
+        error: action.error
+      }
     default:
       return state;
   }

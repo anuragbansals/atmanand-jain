@@ -19,9 +19,10 @@ export function* watchAddPhoto() {
 function* getPhoto() {
   try {
     let response = yield call(service.getPhotos);
-    yield put(actions.gotPhotos(response.data));
+    yield put(actions.getPhotosSuccess(response.data));
   } catch (err) {
     console.log(err);
+    yield put(actions.getPhotosError(err))
   }
 }
 
