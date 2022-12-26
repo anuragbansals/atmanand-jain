@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { connect, useSelector } from "react-redux";
 import "./style.css";
 import { docs } from "./dummy";
 

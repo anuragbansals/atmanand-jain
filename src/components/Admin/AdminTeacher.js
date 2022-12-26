@@ -37,6 +37,7 @@ function AdminTeacher(props) {
     picture: "",
     designation: "",
   });
+  console.log(imageUrl);
   // const dispatch = useDispatch();
 
   // React.useEffect(() => {
@@ -46,7 +47,7 @@ function AdminTeacher(props) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const handleClick = (id) => {
-    console.log("id", id);
+    // console.log("id", id);
     setSelectedTeacher(id.row);
     handleOpen();
   };

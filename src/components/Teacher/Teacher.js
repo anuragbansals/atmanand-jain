@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { connect, useDispatch } from "react-redux";
+import React from "react";
 import Card from "./Card";
 import "./style.css";
 import Navbar from "../Navbar/Navbar";
